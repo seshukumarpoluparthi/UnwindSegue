@@ -9,11 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var selectedString : String = ""
 
+    @IBOutlet weak var lbl_text: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        lbl_text.text = selectedString
+    }
+    
+    
+    @IBAction func unwindToOne(_ sender: UIStoryboardSegue) {}
+
 
 
 }
